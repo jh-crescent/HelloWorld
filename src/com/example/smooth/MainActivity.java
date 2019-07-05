@@ -27,6 +27,7 @@ import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity implements OnClickListener {
 
+	//这里是个同步测试
 	private HorizontalScrollView mHorizontalScrollView ;
 	private LinearLayout mLinearLayout;
 	private ViewPager pager;
