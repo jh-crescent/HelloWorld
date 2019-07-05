@@ -26,8 +26,8 @@ import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity implements OnClickListener {
-
-	//ÕâÀïÊÇ¸öÍ¬²½²âÊÔ
+	//è¿™é‡Œæ˜¯ç½‘ç»œæµ‹è¯•
+	//è¿™é‡Œæ˜¯ä¸ªåŒæ­¥æµ‹è¯•
 	private HorizontalScrollView mHorizontalScrollView ;
 	private LinearLayout mLinearLayout;
 	private ViewPager pager;
@@ -56,9 +56,9 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		mImageView.getLayoutParams().width = item_width;
 		
 		pager = (ViewPager) findViewById(R.id.pager);
-		// ³õÊ¼»¯µ¼º½
+		// åˆå§‹åŒ–å¯¼èˆª
 		initNav();
-		// ³õÊ¼»¯viewPager
+		// åˆå§‹åŒ–viewPager
 		initViewPager();
 	}
 
@@ -82,7 +82,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		for (int i = 0 ; i < 10 ; i++) {
 			RelativeLayout layout = new RelativeLayout(this);
 			TextView view = new TextView(this);
-			view.setText("µÚ"+(i+1)+"¸ö");
+			view.setText("ç¬¬"+(i+1)+"ä¸ª");
 			RelativeLayout.LayoutParams params =  new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 			params.addRule(RelativeLayout.CENTER_IN_PARENT);
 			layout.addView(view, params);
@@ -196,10 +196,10 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 				isEnd = true;
 				beginPosition = currentFragmentIndex * item_width;
 				if (pager.getCurrentItem() == currentFragmentIndex) {
-					// Î´ÌøÈëÏÂÒ»¸öÒ³Ãæ
+					// æœªè·³å…¥ä¸‹ä¸€ä¸ªé¡µé¢
 					mImageView.clearAnimation();
 					Animation animation = null;
-					// »Ö¸´Î»ÖÃ
+					// æ¢å¤ä½ç½®
 					animation = new TranslateAnimation(endPosition, currentFragmentIndex * item_width, 0, 0);
 					animation.setFillAfter(true);
 					animation.setDuration(1);
